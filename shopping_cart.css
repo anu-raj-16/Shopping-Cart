@@ -6,27 +6,151 @@ body {
     color: white;
     font-family: Futura;
 }
-h1 {
+h1, h2 {
     text-align: center;
 }
 h4 {
     color: blue;
     text-align: center;
-    padding-right: 40px;
-    padding-left: 40px;
+    
 }
+button.add-to-cart {
+    margin-left: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: #3AC5FF;
+    color: white;
+    font-family: Futura;
+    font-weight: bold;
+    padding: 2%;
+    border-radius: 15%;
+}
+button.add-to-cart:hover {
+    margin-left: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: rgb(29, 189, 29);
+    color: black;
+    font-family: Futura;
+    font-weight: bold;
+    padding: 2%;
+    border-radius: 15%;
+}
+
 img {
     max-width: 40%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    padding-top: 5%;
   }
 .container_1 {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     background-color: white;
-    margin: 20px auto 20px;
-    padding: 100px 5px 50px;
+    margin: 10px auto 10px;
+    padding: 70px 5px 50px;
     border-radius: 10px;
+    color: blue;
+}
+.container_2 {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    margin: 10px auto 10px;
+    padding: 70px 5px 50px;
+    border-radius: 10px;
+    color: blue;
+}
+.container_3 {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    margin: 10px auto 10px;
+    padding: 70px 5px 50px;
+    border-radius: 10px;
+    color: blue;
+}
+.cart-header {
+    width: 100%;
+    max-width: none;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+h3 {
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+.item-row {
+    width: 100%;
+    max-width: none;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-quantity {
+    display: flex;
+    flex-direction: row;
+}
+
+button.delete {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 20%;
+}
+button.delete:hover {
+    color: black;
+    font-weight: bold;
+    border-radius: 20%;
+}
+input {
+    width: 100%;
+    max-width: 30px;
+    height: 100%;
+    max-height: 20px;
+}
+span.cart-items, span.cart-price, span.cart-quantity {
+    font-weight: bold;
+}
+.items-rows {
+ display: flex;
+flex-direction: column;
+}
+.total {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+span.cart-total-price {
+    margin-left: auto;
+}
+button.purchase {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: 40px;
+    background-color: #3AC5FF;
+    color: white;
+    font-family: Futura;
+    font-weight: bold;
+    border-radius: 10%;
+}
+button.purchase:hover {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: 40px;
+    background-color: green;
+    color: white;
+    font-family: Futura;
+    font-weight: bold;
+    border-radius: 10%;
 }
