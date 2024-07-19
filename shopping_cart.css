@@ -117,7 +117,7 @@ input {
     height: 100%;
     max-height: 20px;
 }
-span.cart-items, span.cart-price, span.cart-quantity {
+span.cart-items, span.cart-price, span.cart-quantity, span.cart-items-header, span.cart-price-header, span.cart-quantity-header {
     font-weight: bold;
 }
 .items-rows {
@@ -137,7 +137,7 @@ button.purchase {
     max-width: none;
     height: 100%;
     max-height: 40px;
-    background-color: #3AC5FF;
+    background-color: #3a47ff;
     color: white;
     font-family: Futura;
     font-weight: bold;
