@@ -15,9 +15,6 @@ h4 {
     
 }
 button.add-to-cart {
-    margin-left: 10%;
-    padding-right: 5%;
-    padding-left: 5%;
     background-color: #3AC5FF;
     color: white;
     font-family: Futura;
@@ -26,9 +23,6 @@ button.add-to-cart {
     border-radius: 15%;
 }
 button.add-to-cart:hover {
-    margin-left: 10%;
-    padding-right: 5%;
-    padding-left: 5%;
     background-color: rgb(29, 189, 29);
     color: black;
     font-family: Futura;
@@ -45,6 +39,19 @@ img {
     display: block;
     padding-top: 5%;
   }
+.item-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+.title {
+    font-weight: bold;
+    color: blue;
+    display: flex;
+    justify-content: center;
+}
 .container_1 {
     width: 100%;
     max-width: 400px;
