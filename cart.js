@@ -24,6 +24,18 @@ function ready() {
         var addToCartbutton = addToCartbuttons[i];
         addToCartbutton.addEventListener('click', addToCartClicked);
     }
+
+    var purchaseButton = document.getElementsByClassName('purchase')[0];
+    purchaseButton.addEventListener('click', purchaseItems);
+}
+
+function purchaseItems(){
+    alert('Thank you for shopping at QuickCart!');
+    var cartItemsToPurchase = document.getElementsByClassName('items-rows')[0];
+    while(cartItemsToPurchase.hasChildNodes()){
+        cartItemsToPurchase.removeChild(cartItemsToPurchase.firstChild);
+    }
+    updateCartTotal();
 }
 
 function addToCartClicked(event) {
@@ -39,7 +51,26 @@ function addItemtoCart(title, price) {
     var cartRow = document.createElement('div');
     cartRow.innerText = title;
     var cartList = document.getElementsByClassName('items-rows')[0];
+    cartRow.classList.add('item-row');
+    cartItemNames = document.getElementsByClassName('cart-items');
+    for (var i = 0; i < cartItemNames.length; i++){
+        item = cartItemNames[i].innerText;
+        if (item == title) {
+            alert('This item is already added to cart');
+            return;
+        }
+     }
+    cartRowContents = `<span class = "cart-items cart-column">${title}</span>
+                        <span class = "cart-price cart-column">${price}</span>
+                        <div class="cart-quantity cart-column">
+                            <input class="item_quantity" type="number" value = "1">
+                            <button class="delete">X</button>
+                        </div>`
+    cartRow.innerHTML = cartRowContents;
     cartList.append(cartRow);
+    cartRow.getElementsByClassName('delete')[0].addEventListener('click', removeCartEvent);
+    cartRow.getElementsByClassName('item_quantity')[0].addEventListener('change', quantityChanged);
+    updateCartTotal();
 }
 
 function quantityChanged(event) {
